@@ -6,17 +6,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import BookList from "./components/BookList";
 import fantasyBooks from "./fantasyBooks.json";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import MyNavbar from "./components/MyNavbar";
+import Register from "./components/Register";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <header className="App-header">
-          {/* <WarningSign text="Watch out again!" /> */}
-          {/* <MyBadge text="NEW!!" color="info" /> */}
-          {/* <SingleBook book={fantasyBooks[0]} /> */}
-          <BookList books={fantasyBooks} />
-        </header>
+        <MyNavbar />
+        <Route path="/" exact render={() => <BookList books={fantasyBooks} />} />
+        <Route path="/register" exact component={Register} /> 
       </Router>
     </div>
   );

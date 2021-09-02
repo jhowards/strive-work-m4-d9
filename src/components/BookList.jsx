@@ -12,6 +12,7 @@ class BookList extends React.Component {
 
     render() {
         return (
+            <header className="App-header">
             <Container>
                 <Row>
                     <Col md={8}>
@@ -48,6 +49,7 @@ class BookList extends React.Component {
                     </Col>
                 </Row>
             </Container>
+            </header>
         )
     }
 
